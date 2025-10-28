@@ -1,6 +1,6 @@
 :root {
   --bg-layout-color: #FFF6F8;
-  --bg-container-color: #FFE2E9;
+  --bg-block-border-color: #FFE2E9;
   --bg-block-color: #FFC6D1;
   --text-primary-color: #582B41;
   --text-secondary-color: #7F4B61;
@@ -35,6 +35,9 @@ a:hover {
 }
 
 .container {
+  /*Глобальний класс, устанавливаеться в начале кода ответственного 
+  за обекты в пределее таблицы блоков. | A global class that is at the 
+  beginning of the code relevant for setting objects in the block boundary table*/
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -42,6 +45,8 @@ a:hover {
 }
 
 .blocks-list {
+  /*Класс на одну степеньку ниже, устанавливаеться в "Заголовок таблицы
+   блоков. | The class one step lower is set to "Block Table Header.*/
   display: grid;
   grid-template-columns: repeat(2, 390px);
   gap: 44px;
@@ -49,8 +54,12 @@ a:hover {
 }
 
 .block {
+  /*Класс предназначенный для обычного блока в пределах таблицы блоков 
+  занимаюший простарнство 1х1. | A class intended for a regular block within 
+  a block table occupying 1x1 space.*/
   background-color: var(--bg-block-color);
   border-radius: 5%;
+  border-color: var(--bg-block-border-color);
   text-align: center;
   /*align-items: center;
   justify-content: center;
@@ -61,9 +70,13 @@ a:hover {
 }
 
 .block-wide {
+  /**Класс предназначенный для широкого блока в пределах таблицы блоков 
+  занимаюший простарнство 1х2. | A class designed for a wide block within a block table
+  occupying a 1x2 space.*/
   grid-column: span 2;
   background-color: var(--bg-block-color);
   border-radius: 5%;
+  border-color: var(--bg-block-border-color);
   text-align: center;
   /*align-items: center;
   justify-content: center;
