@@ -45,7 +45,7 @@ h3 {
   /*Класс на одну степеньку ниже, устанавливаеться в "Заголовок таблицы
    блоков. | The class one step lower is set to "Block Table Header.*/
   display: grid;
-  grid-template-columns: repeat(2, 390px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 44px;
   justify-content: center;
 }
@@ -70,7 +70,7 @@ h3 {
   /**Класс предназначенный для широкого блока в пределах таблицы блоков 
   занимаюший простарнство 1х2. | A class designed for a wide block within a block table
   occupying a 1x2 space.*/
-  grid-column: span 2;
+  grid-column: 1/-1;
   background-color: var(--bg-block-color);
   border-radius: 5%;
   border: var(--bg-block-border-color) 4px solid;
@@ -93,7 +93,6 @@ h3 {
   }
 
   .blocks-list {
-    grid-template-columns: repeat(2, 390px);
     gap: 28px;
   }
 
@@ -106,7 +105,7 @@ h3 {
   }
 
   .blocks-list {
-    grid-template-columns: repeat(1, 350px);
+    grid-template-columns: repeat(1, 1fr);
     gap: 16px;
   }
 }
@@ -118,7 +117,6 @@ h3 {
   }
 
   .blocks-list {
-    grid-template-columns: repeat(1, 300px);
     gap: 16px;
   }
 
