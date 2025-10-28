@@ -15,23 +15,20 @@
 
 body {
   margin: 0;
+  padding: 30px;
   background-color: var(--bg-layout-color);
 }
 
-h4,
-h1,
 h2,
-h3 {
+h1 {
   color: var(--text-highlighted-color);
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--text-highlighted-color);
+h4,
+h3 {
+  color: var(--text-highlighted2-color);
+  margin: 0;
 }
 
 .container {
@@ -59,13 +56,13 @@ a:hover {
   a block table occupying 1x1 space.*/
   background-color: var(--bg-block-color);
   border-radius: 5%;
-  border-color: var(--bg-block-border-color);
+  border: var(--bg-block-border-color) 4px solid;
   text-align: center;
   /*align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
-  gap: 16px;*/
+  flex-direction: column;*/
+  gap: 16px;
   padding: 16px;
 }
 
@@ -76,13 +73,13 @@ a:hover {
   grid-column: span 2;
   background-color: var(--bg-block-color);
   border-radius: 5%;
-  border-color: var(--bg-block-border-color);
+  border: var(--bg-block-border-color) 4px solid;
   text-align: center;
-  /*align-items: center;
+  align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;*/
+  gap: 16px;
   padding: 16px;
 }
 
@@ -96,8 +93,8 @@ a:hover {
   }
 
   .blocks-list {
-    grid-template-columns: repeat(1, 350px);
-    gap: 16px;
+    grid-template-columns: repeat(2, 390px);
+    gap: 28px;
   }
 
 }
@@ -109,8 +106,8 @@ a:hover {
   }
 
   .blocks-list {
-    grid-template-columns: repeat(2, 390px);
-    gap: 28px;
+    grid-template-columns: repeat(1, 350px);
+    gap: 16px;
   }
 }
 
