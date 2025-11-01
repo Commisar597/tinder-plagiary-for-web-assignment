@@ -1,7 +1,7 @@
 :root {
   --bg-layout-color: #FFF6F8;
-  --bg-block-border-color: #FFE2E9;
-  --bg-block-color: #FFC6D1;
+  --bg-block-border-color: #ffdde5;
+  --bg-block-color: #ffbfcc;
   --text-primary-color: #582B41;
   --text-secondary-color: #7F4B61;
   --text-highlighted-color: #E3006F;
@@ -16,7 +16,7 @@
 body {
   margin: 0;
   padding: 30px;
-  background-color: var(--bg-layout-color);
+  background-color: var(--bg-layout-color)
 }
 
 h2,
@@ -31,6 +31,10 @@ h3 {
   margin: 0;
 }
 
+span {
+  color: var(--text-secondary-color);
+}
+
 .container {
   /*Глобальний класс, устанавливаеться в начале кода ответственного 
   за обекты в пределее таблицы блоков. | A global class that is at the 
@@ -39,6 +43,33 @@ h3 {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 40px;
+}
+
+.to-left {
+  /*Класс для выравнивания по правому краю | Class for right alignment*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.to-left form div {
+  display: flex;
+  align-items: center; /* выравнивает чекбокс и текст по вертикали */
+  gap: 6px; /* расстояние между чекбоксом и текстом */
+}
+
+.header {
+  /*Контейнер для заголовка | container for topic*/
+  width: 100%;
+}
+
+.header-content {
+  /*Блок для заголовка | block for topic*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 .blocks-list {
@@ -63,7 +94,7 @@ h3 {
   display: flex;
   flex-direction: column;*/
   gap: 16px;
-  padding: 16px;
+  padding: 28px;
 }
 
 .block-wide {
@@ -75,13 +106,14 @@ h3 {
   border-radius: 5%;
   border: var(--bg-block-border-color) 4px solid;
   text-align: center;
-  align-items: center;
+  /*align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;*/
   gap: 16px;
-  padding: 16px;
+  padding: 28px;
 }
+
 
 /*    braek points    */
 
