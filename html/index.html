@@ -255,89 +255,112 @@
         <div>
           <h3>Sign-up</h3>
           <br />
-          <div class="to-left">
-            <form>
-              <label for="nickname">Nickname (Display Name)</label><br />
-              <input type="text" id="nickname" name="nickname" minlength="2" required /><br /><br />
-              <label for="password">Password</label><br />
-              <!--Мы не делаем подтверждение пароля, так как это JavaScript. | We're not doing password
+          <form>
+            <div></div>
+            <label for="nickname">Nickname (Display Name)</label><br />
+            <input type="text" id="nickname" name="nickname" minlength="2" required /><br /><br />
+            <label for="password">Password</label><br />
+            <!--Мы не делаем подтверждение пароля, так как это JavaScript. | We're not doing password
               confirmation since it's JavaScript-->
-              <!--вроде как этот коментарий не для меня-->
-              <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                required /><br /><br />
-              <h4>Choose a subscription plan</h4>
-              <br />
-              <input type="radio" name="subscription" id="subscription" value="Free Subscription" /><label
-                for="subscription">Free Subscription</label><br /><br />
-              <!--будь хорошим мальчиком и, пожалуйста, разработай поля span :) Люблю тебя :> |
-             be a good boy and design the span fields please :) Love you :>-->
-             <!--сделал | done-->
-              <span>
-                €0 / month<br />
-                Create a profile<br />Swipe & match with daily limits<br />Send
-                basic messages<br />View limited profiles per day </span><br /><br />
-              <input type="radio" name="subscription" id="subscription" value="Plus Subscription" /><label
-                for="subscription">Plus Subscription</label><br /><br />
-              <span>
-                €9.99 / month<br />
-                Unlimited likes<br />Rewind last swipe<br />1 free Boost per
-                week<br />Change location<br />No ads </span><br /><br />
-              <input type="radio" name="subscription" id="subscription" value="Gold Subscription" /><label
-                for="subscription">Gold Subscription</label><br /><br />
-              <span>
-                €19.99 / month<br />
-                All Plus features<br />See who liked you instantly<br />Priority
-                profile visibility<br />Daily Super Likes </span><br /><br />
-              <input type="radio" name="subscription" id="subscription" value="Platinum Subscription" /><label
-                for="subscription">Platinum Subscription</label><br /><br />
-              <span>
-                €29.99 / month<br />
-                All Gold features<br />Message before matching (when liked)<br />Priority
-                in recommendations<br />Unlimited Boosts & Super Likes<br />Exclusive
-                Platinum badge </span><br /><br />
-              <input type="radio" name="subscription" id="subscription" value="Elite Subscription" /><label
-                for="subscription">Elite Subscription</label><br /><br />
-              <span>
-                €49.99 / month<br />
-                Personalized match suggestions<br />Verified premium badge<br />Invite-only
-                live events<br />Dedicated support & profile optimization<br /></span><br /><br />
-            </form>
-          </div>
-          <!--ЭТОТ РАДИОСПИСОК НУЖНО СТИЛИЗИРОВАТЬ, ОН ВЫЗЫВАЕТ У МЕНЯ НЕПРИЯТНЫЕ ВОЛНЕНИЯ ОТ ДИЗАЙНА, лол
-          | THIS RADIO LIST NEEDS TO BE STYLIZED, IT GIVES ME UNCOMFORTABLE DESIGN VIBES lol-->
-          <!--често, попробовал, пока хз как-->
+            <!--вроде как этот коментарий не для меня-->
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+              required /><br /><br />
+            <h4>Choose a subscription plan</h4>
+            <br />
+            <div class="blocks-list">
+              <div class="block">
+                <input type="radio" name="subscription" id="subscription" value="Free Subscription" /><label
+                  for="subscription">Free Subscription</label><br /><br />
+                <!--будь хорошим мальчиком и, пожалуйста, разработай поля span :) Люблю тебя :> |
+                be a good boy and design the span fields please :) Love you :>-->
+                <!--сделал | done-->
+                <span>
+                  €0 / month<br />
+                  Create a profile<br />Swipe & match with daily limits<br />Send
+                  basic messages<br />View limited profiles per day </span><br /><br />
+              </div>
+              <div class="block">
+                <input type="radio" name="subscription" id="subscription" value="Plus Subscription" /><label
+                  for="subscription">Plus Subscription</label><br /><br />
+                <span>
+                  €9.99 / month<br />
+                  Unlimited likes<br />Rewind last swipe<br />1 free Boost per
+                  week<br />Change location<br />No ads </span><br /><br />
+              </div>
+              <div class="block">
+                <input type="radio" name="subscription" id="subscription" value="Gold Subscription" /><label
+                  for="subscription">Gold Subscription</label><br /><br />
+                <span>
+                  €19.99 / month<br />
+                  All Plus features<br />See who liked you instantly<br />Priority
+                  profile visibility<br />Daily Super Likes </span><br /><br />
+              </div>
+              <div class="block">
+                <input type="radio" name="subscription" id="subscription" value="Platinum Subscription" /><label
+                  for="subscription">Platinum Subscription</label><br /><br />
+                <span>
+                  €29.99 / month<br />
+                  All Gold features<br />Message before matching (when liked)<br />Priority
+                  in recommendations<br />Unlimited Boosts & Super Likes<br />Exclusive
+                  Platinum badge </span><br /><br />
+              </div>
+              <div class="block">
+                <input type="radio" name="subscription" id="subscription" value="Elite Subscription" /><label
+                  for="subscription">Elite Subscription</label><br /><br />
+                <span>
+                  €49.99 / month<br />
+                  Personalized match suggestions<br />Verified premium badge<br />Invite-only
+                  live events<br />Dedicated support & profile optimization<br /></span><br /><br />
+              </div>
+            </div>
+          </form>
         </div>
+        <!--ЭТОТ РАДИОСПИСОК НУЖНО СТИЛИЗИРОВАТЬ, ОН ВЫЗЫВАЕТ У МЕНЯ НЕПРИЯТНЫЕ ВОЛНЕНИЯ ОТ ДИЗАЙНА, лол
+          | THIS RADIO LIST NEEDS TO BE STYLIZED, IT GIVES ME UNCOMFORTABLE DESIGN VIBES lol-->
+        <!--сделал | done-->
       </div>
-      <div class="block-wide">
-        <div>
-          <h3>Checkboxes</h3>
-          <br />
-          <div class="to-left">
-            <form>
-              <div>
-                <input type="checkbox" id="tos" name="checkboxList" value="TOS" required />
-                <label for="tos">TOS</label>
-              </div>
-              <div>
-                <input type="checkbox" id="newsletter" name="checkboxList" value="Email Newsletter" />
-                <label for="newsletter">Email Newsletter</label>
-              </div>
-              <div>
-                <input type="checkbox" id="renewal" name="checkboxList" value="Subscription Renewal" />
-                <label for="renewal">Subscription Renewal</label>
-              </div>
-              <div>
-                <input type="checkbox" id="notifications" name="checkboxList" value="Push Notifications" />
-                <label for="notifications">Push Notifications</label>
-              </div>
-            </form>
-          </div>
+    </div>
+    <div class="block-wide">
+      <div>
+        <h3>Checkboxes</h3>
+        <br />
+        <div class="to-left">
+          <form>
+            <div>
+              <input type="checkbox" id="tos" name="checkboxList" value="TOS" required />
+              <label for="tos">TOS</label>
+            </div>
+            <div>
+              <input type="checkbox" id="newsletter" name="checkboxList" value="Email Newsletter" />
+              <label for="newsletter">Email Newsletter</label>
+            </div>
+            <div>
+              <input type="checkbox" id="renewal" name="checkboxList" value="Subscription Renewal" />
+              <label for="renewal">Subscription Renewal</label>
+            </div>
+            <div>
+              <input type="checkbox" id="notifications" name="checkboxList" value="Push Notifications" />
+              <label for="notifications">Push Notifications</label>
+            </div>
+          </form>
         </div>
       </div>
     </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div>
+            <h2>
+              <input type="submit" value="Submit" />
+            </h2>
+          </div>
+        </div>
+      </div>
+    </header>
     <!--Сделай еще и кнопку, пожалуйста ^^ | Design the button too, pretty please ^^-->
-    <input type="submit" value="Submit" />
+    <!--сделал | done-->
   </form>
 </body>
 
