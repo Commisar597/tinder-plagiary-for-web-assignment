@@ -121,6 +121,12 @@ span {
   padding: 28px;
 }
 
+.block-submit {
+  background-color: var(--text-secondary-color);
+  border-radius: 15%;
+  border: var(--text-primary-color) 4px solid;
+}
+
 /*    break points    */
 
 
