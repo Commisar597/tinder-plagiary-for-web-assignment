@@ -35,6 +35,10 @@ span {
   color: var(--text-secondary-color);
 }
 
+label {
+  margin: 5px;
+}
+
 .container {
   /*Глобальний класс, устанавливаеться в начале кода ответственного 
   за обекты в пределее таблицы блоков. | A global class that is at the 
@@ -125,6 +129,16 @@ span {
   background-color: var(--text-secondary-color);
   border-radius: 15%;
   border: var(--text-primary-color) 4px solid;
+}
+/*
+:invalid {
+  border: 2px solid var(--text-highlighted-color);
+  background-color: var(--bg-layout-color);
+}*/
+
+.base:invalid {
+  border: 2px solid var(--text-highlighted-color);
+  background-color: var(--bg-layout-color);
 }
 
 /*    break points    */

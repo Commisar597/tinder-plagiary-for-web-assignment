@@ -29,7 +29,6 @@
            maybe put a more dark pink so that the h1 won't be in that big of a contrast from everything else-->
           <!--сделал | done-->
           <h3>Personal Info</h3>
-          <br />
           <!-- Я сделаю их в ряд, а вы, пожалуйста, сделайте их в столбцах, как указано в дизайне.
           | I'll make them in a row, please make them in columns as mentioned in the design-->
           <!--сделал | done-->
@@ -61,10 +60,9 @@
       <div class="block">
         <div>
           <h3>Photo</h3>
-          <br />
           <div class="to-left">
             <form>
-              <label for="image">Upload your photo</label><br /><br />
+              <label for="image">Upload your photo</label>
               <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png, .tif, .tiff" required />
             </form>
           </div>
@@ -73,7 +71,6 @@
       <div class="block">
         <div class="to-center">
           <h3>Main Preferences</h3>
-          <br />
           <form class="to-left">
             <label for="gender">Gender</label>
             <select id="gender" name="gender" required>
@@ -132,20 +129,18 @@
       <div class="block">
         <div>
           <h3>Profile</h3>
-          <br />
           <h4>Short Description About Yourself</h4>
-          <br />
           <div class="to-left">
             <form>
-              <label for="career">Career</label><br />
-              <input type="text" id="career" name="career" required /><br /><br />
-              <label for="interests">Interests</label><br />
-              <textarea id="interests" name="interests" required></textarea><br /><br />
-              <label for="hobbies">Hobbies</label><br />
-              <textarea id="hobbies" name="hobbies" required></textarea><br /><br />
-              <label for="starsign">Star sign</label><br />
-              <input type="starsign" id="starsign" name="starsign" required /><br /><br />
-              <label for="mbti">MBTI</label><br />
+              <label for="career">Career</label>
+              <input type="text" id="career" name="career" required />
+              <label for="interests">Interests</label>
+              <textarea id="interests" name="interests" required></textarea>
+              <label for="hobbies">Hobbies</label>
+              <textarea id="hobbies" name="hobbies" required></textarea>
+              <label for="starsign">Star sign</label>
+              <input type="starsign" id="starsign" name="starsign" required />
+              <label for="mbti">MBTI</label>
               <input type="mbti" id="mbti" name="mbti" required />
             </form>
           </div>
@@ -154,7 +149,6 @@
       <div class="block">
         <div>
           <h3>Additional Preferences</h3>
-          <br />
           <div class="to-left">
             <label for="interestsPref">Interests Preferences</label>
             <textarea id="interestsPref" name="interestsPref" required></textarea>
@@ -251,10 +245,9 @@
       <div class="block">
         <div>
           <h3>Photo Album</h3>
-          <br />
           <div class="to-left">
             <form>
-              <label for="imageAdd">Upload additional photos to display</label><br /><br />
+              <label for="imageAdd">Upload additional photos to display</label>
               <input type="file" id="imageAdd" name="imageAdd" accept=".jpg, .jpeg, .png, .tif, .tiff" required />
             </form>
           </div>
@@ -263,24 +256,22 @@
       <div class="block-wide">
         <div>
           <h3>Sign-up</h3>
-          <br />
           <form>
             <div></div>
-            <label for="nickname">Nickname (Display Name)</label><br />
-            <input type="text" id="nickname" name="nickname" minlength="2" required /><br /><br />
-            <label for="password">Password</label><br />
+            <label for="nickname">Nickname (Display Name)</label>
+            <input type="text" id="nickname" name="nickname" minlength="2" required />
+            <label for="password">Password</label>
             <!--Мы не делаем подтверждение пароля, так как это JavaScript. | We're not doing password
               confirmation since it's JavaScript-->
             <!--вроде как этот коментарий не для меня-->
             <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required /><br /><br />
+              required />
             <h4>Choose a subscription plan</h4>
-            <br />
             <div class="blocks-list">
               <div class="block">
                 <input type="radio" name="subscription" id="subscription" value="Free Subscription" /><label
-                  for="subscription">Free Subscription</label><br /><br />
+                  for="subscription">Free Subscription</label>
                 <!--будь хорошим мальчиком и, пожалуйста, разработай поля span :) Люблю тебя :> |
                 be a good boy and design the span fields please :) Love you :>-->
                 <!--сделал | done-->
@@ -291,36 +282,36 @@
               </div>
               <div class="block">
                 <input type="radio" name="subscription" id="subscription" value="Plus Subscription" /><label
-                  for="subscription">Plus Subscription</label><br /><br />
+                  for="subscription">Plus Subscription</label>
                 <span>
                   €9.99 / month<br />
                   Unlimited likes<br />Rewind last swipe<br />1 free Boost per
-                  week<br />Change location<br />No ads </span><br /><br />
+                  week<br />Change location<br />No ads </span>
               </div>
               <div class="block">
                 <input type="radio" name="subscription" id="subscription" value="Gold Subscription" /><label
-                  for="subscription">Gold Subscription</label><br /><br />
+                  for="subscription">Gold Subscription</label>
                 <span>
                   €19.99 / month<br />
                   All Plus features<br />See who liked you instantly<br />Priority
-                  profile visibility<br />Daily Super Likes </span><br /><br />
+                  profile visibility<br />Daily Super Likes </span>
               </div>
               <div class="block">
                 <input type="radio" name="subscription" id="subscription" value="Platinum Subscription" /><label
-                  for="subscription">Platinum Subscription</label><br /><br />
+                  for="subscription">Platinum Subscription</label>
                 <span>
                   €29.99 / month<br />
                   All Gold features<br />Message before matching (when liked)<br />Priority
                   in recommendations<br />Unlimited Boosts & Super Likes<br />Exclusive
-                  Platinum badge </span><br /><br />
+                  Platinum badge </span>
               </div>
               <div class="block">
                 <input type="radio" name="subscription" id="subscription" value="Elite Subscription" /><label
-                  for="subscription">Elite Subscription</label><br /><br />
+                  for="subscription">Elite Subscription</label>
                 <span>
                   €49.99 / month<br />
                   Personalized match suggestions<br />Verified premium badge<br />Invite-only
-                  live events<br />Dedicated support & profile optimization<br /></span><br /><br />
+                  live events<br />Dedicated support & profile optimization<br /></span>
               </div>
             </div>
           </form>
@@ -332,7 +323,6 @@
       <div class="block-wide">
         <div>
           <h3>Checkboxes</h3>
-          <br />
           <div class="to-left">
             <form>
               <div>
