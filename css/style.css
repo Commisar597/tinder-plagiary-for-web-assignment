@@ -134,7 +134,8 @@ label {
 :invalid {
   border: 2px solid var(--text-highlighted-color);
   background-color: var(--bg-layout-color);
-}*/
+}
+*/
 
 .base:invalid {
   border: 2px solid var(--text-highlighted-color);
