@@ -1,11 +1,11 @@
 :root {
-  --bg-layout-color: #FFF6F8;
+  --bg-layout-color: #fff6f8;
   --bg-block-border-color: #ffdde5;
   --bg-block-color: #ffbfcc;
-  --text-primary-color: #582B41;
-  --text-secondary-color: #7F4B61;
-  --text-highlighted-color: #E3006F;
-  --text-highlighted2-color: #FF78A7;
+  --text-primary-color: #582b41;
+  --text-secondary-color: #7f4b61;
+  --text-highlighted-color: #e3006f;
+  --text-highlighted2-color: #ff78a7;
 }
 
 * {
@@ -16,7 +16,7 @@
 body {
   margin: 0;
   padding: 30px;
-  background-color: var(--bg-layout-color)
+  background-color: var(--bg-layout-color);
 }
 
 h2,
@@ -28,11 +28,7 @@ h1 {
 h4,
 h3 {
   color: var(--text-highlighted2-color);
-  margin: 0;
-}
-
-span {
-  color: var(--text-secondary-color);
+  margin: 15px;
 }
 
 label {
@@ -69,7 +65,6 @@ label {
   align-items: flex-start;
 }
 
-
 .header {
   /*Контейнер для заголовка | container for topic*/
   width: 100%;
@@ -90,6 +85,7 @@ label {
   grid-template-columns: repeat(2, 1fr);
   gap: 44px;
   justify-content: center;
+  margin-top: 15px;
 }
 
 .block {
@@ -141,11 +137,21 @@ label {
   background-color: var(--bg-layout-color);
 }
 
+.required::after {
+  content: " *";
+  color: var(--text-highlighted-color);
+}
+
+.description {
+  font-size: 13px;
+  text-align: left;
+  margin: 0;
+  color: var(--text-secondary-color);
+}
+
 /*    break points    */
 
-
 @media (max-width: 1024px) {
-
   .container {
     padding: 0 32px;
   }
@@ -153,11 +159,9 @@ label {
   .blocks-list {
     gap: 28px;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .container {
     padding: 0 24px;
   }
@@ -169,7 +173,6 @@ label {
 }
 
 @media (max-width: 375px) {
-
   .container {
     padding: 0 16px;
   }
@@ -177,5 +180,4 @@ label {
   .blocks-list {
     gap: 16px;
   }
-
 }

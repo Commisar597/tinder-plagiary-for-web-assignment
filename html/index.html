@@ -1,363 +1,750 @@
 <!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tinder - parody</title>
+    <link href="../css/style.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Tinder - parody</title>
-  <link href="../css/style.css" type="text/css" rel="stylesheet" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div>
-          <h1>Tinder</h1>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!--по центру страницы, выравнивание по отступам или полям. Это название |
-   in the center of the page, alignment with paddings or margins. this is the name-->
-  <form action="/action_page.php">
-    <div class="container blocks-list">
-      <div class="block">
-        <div>
-          <!--может быть, добавить более тёмный розовый, чтобы h1 не так сильно контрастировал со всем остальным |
-           maybe put a more dark pink so that the h1 won't be in that big of a contrast from everything else-->
-          <!--сделал | done-->
-          <h3>Personal Info</h3>
-          <!-- Я сделаю их в ряд, а вы, пожалуйста, сделайте их в столбцах, как указано в дизайне.
-          | I'll make them in a row, please make them in columns as mentioned in the design-->
-          <!--сделал | done-->
-          <div class="to-left">
-            <form>
-              <form>
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" minlength="2" required />
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" minlength="2" required />
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age" min="16" max="120" step="1" required />
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" minlength="2" required />
-                <label for="zipCode">ZIP Code</label>
-                <input type="text" id="zipCode" name="zipCode" title="Input your zip code in numbers" required />
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                  title="Input the phone number in the following format +45 12 34 56 78" placeholder="+45 12 34 56 78" required />
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" pattern=".+@example\.com" size="30" placeholder="blyat@example.com" required />
-                <label for="birthDate">Birth Date</label>
-                <input type="date" id="birthDate" name="birthDate" required />
-              </form>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div>
-          <h3>Photo</h3>
-          <div class="to-left">
-            <form>
-              <label for="image">Upload your photo</label>
-              <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png, .tif, .tiff" required />
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div class="to-center">
-          <h3>Main Preferences</h3>
-          <form class="to-left">
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender" required>
-              <option value="">Please select one…</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="non-binary">Non-Binary</option>
-              <option value="other">Other</option>
-              <option value="Prefer not to answer">Prefer not to Answer</option>
-            </select>
-            <label for="sexualOrientation">Sexual Orientation</label>
-            <select id="sexualOrientation" name="sexualOrientation" required>
-              <option value="">Please select one…</option>
-              <option value="straight">Straight</option>
-              <option value="gay">Gay</option>
-              <option value="lesbian">Lesbian</option>
-              <option value="bisexual">Bisexual</option>
-              <option value="pansexual">Pansexual</option>
-              <option value="asexual">Asexual</option>
-              <option value="other">Other</option>
-              <option value="Prefer not to answer">Prefer not to Answer</option>
-            </select>
-            <h4>Preferences</h4>
-            <label for="ageRange">Age Range</label>
-            <select id="ageRange" name="ageRange">
-              <option value="">-- Choose a range --</option>
-              <option value="1">Under 25</option>
-              <option value="2">25-40</option>
-              <option value="3">40-60</option>
-              <option value="4">Over 60</option>
-            </select>
-            <label for="locationRange">Location Range</label>
-            <input type="range" id="locationRange" name="locationRange" min="4" max="150" step="1" list="markers"/>
-            <datalist id="markers">
-              <option value="4"></option>
-              <option value="25"></option>
-              <option value="50"></option>
-              <option value="75"></option>
-              <option value="100"></option>
-              <option value="125"></option>
-              <option value="150"></option>
-            </datalist>
-            <span>Location range starts from 4km and finishes at 150km</span>
-            <label for="commitmentType">Commitment Type</label>
-            <select id="commitmentType" name="commitmentType">
-              <option value="">-- Choose a type --</option>
-              <option value="longTerm">Long-Term Commitment</option>
-              <option value="shortTerm">Short-Term Commitment</option>
-              <option value="romantic">Romantic Relationship</option>
-              <option value="open">Open Relationship</option>
-              <option value="casual">Casual Dating</option>
-            </select>
-          </form>
-        </div>
-      </div>
-      <div class="block">
-        <div>
-          <h3>Profile</h3>
-          <h4>Short Description About Yourself</h4>
-          <div class="to-left">
-            <form>
-              <label for="career">Career</label>
-              <input type="text" id="career" name="career" required />
-              <label for="interests">Interests</label>
-              <textarea id="interests" name="interests" required></textarea>
-              <label for="hobbies">Hobbies</label>
-              <textarea id="hobbies" name="hobbies" required></textarea>
-              <label for="starsign">Star sign</label>
-              <input type="starsign" id="starsign" name="starsign" required />
-              <label for="mbti">MBTI</label>
-              <input type="mbti" id="mbti" name="mbti" required />
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div>
-          <h3>Additional Preferences</h3>
-          <div class="to-left">
-            <label for="interestsPref">Interests Preferences</label>
-            <textarea id="interestsPref" name="interestsPref" required></textarea>
-            <label for="hobbiesPref">Hobbies Preferences</label>
-            <textarea id="hobbiesPref" name="hobbiesPref" required></textarea>
-            <label for="starsignPref">Star sign Preferences</label>
-            <input type="starsignPref" id="starsignPref" name="starsignPref" required />
-            <label for="mbtiPref">MBTI Preferences</label>
-            <input type="mbtiPref" id="mbtiPref" name="mbtiPref" required />
-            <label for="genderPref">Gender Preferences</label>
-            <select id="genderPref" name="genderPref" required>
-              <option value="">-- Choose your preference --</option>
-              <option value="female">Female</option>
-              <option value="male">Male</option>
-              <option value="non-binary">Non-Binary</option>
-              <option value="other">Other</option>
-              <option value="Prefer not to answer">
-                Prefer not to Answer
-              </option>
-            </select>
-            <h4>Look Preferences</h4>
-            <label for="hair">Preferred Hair Type</label>
-            <select id="hair" name="hair" required>
-              <option value="">-- Choose hair type --</option>
-              <option value="long">Long</option>
-              <option value="medium">Medium</option>
-              <option value="short">Short</option>
-              <option value="curly">Curly</option>
-              <option value="straight">Straight</option>
-              <option value="wavy">Wavy</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="haircolor">Preferred Hair Color</label>
-            <select id="haircolor" name="haircolor">
-              <option value="">-- Choose color --</option>
-              <option value="blonde">Blonde</option>
-              <option value="brunette">Brunette</option>
-              <option value="black">Black</option>
-              <option value="red">Red</option>
-              <option value="dyed">Dyed / Unnatural</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="eyes">Preferred Eye Color</label>
-            <select id="eyes" name="eyes">
-              <option value="">-- Choose eye color --</option>
-              <option value="blue">Blue</option>
-              <option value="green">Green</option>
-              <option value="brown">Brown</option>
-              <option value="hazel">Hazel</option>
-              <option value="gray">Gray</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="body">Preferred Body Type</label>
-            <select id="body" name="body">
-              <option value="">-- Choose body type --</option>
-              <option value="slim">Slim</option>
-              <option value="average">Average</option>
-              <option value="athletic">Athletic</option>
-              <option value="curvy">Curvy</option>
-              <option value="muscular">Muscular</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="style">Preferred Style</label>
-            <select id="style" name="style">
-              <option value="">-- Choose style --</option>
-              <option value="casual">Casual</option>
-              <option value="sporty">Sporty</option>
-              <option value="elegant">Elegant</option>
-              <option value="streetwear">Streetwear</option>
-              <option value="artistic">Artistic / Edgy</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="height">Preferred Height</label>
-            <select id="height" name="height">
-              <option value="">-- Choose height preference --</option>
-              <option value="shorter">Shorter than me</option>
-              <option value="same">About the same height</option>
-              <option value="taller">Taller than me</option>
-              <option value="any">No preference</option>
-            </select>
-            <label for="vibe">Preferred Overall Look</label>
-            <select id="vibe" name="vibe">
-              <option value="">-- Choose look type --</option>
-              <option value="natural">Natural</option>
-              <option value="confident">Confident</option>
-              <option value="classic">Classic</option>
-              <option value="artistic">Artistic</option>
-              <option value="unique">Unique / Creative</option>
-              <option value="any">No preference</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div>
-          <h3>Photo Album</h3>
-          <div class="to-left">
-            <form>
-              <label for="imageAdd">Upload additional photos to display</label>
-              <input type="file" id="imageAdd" name="imageAdd" accept=".jpg, .jpeg, .png, .tif, .tiff" required />
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="block-wide">
-        <div>
-          <h3>Sign-up</h3>
-          <form>
-            <div></div>
-            <label for="nickname">Nickname (Display Name)</label>
-            <input type="text" id="nickname" name="nickname" minlength="2" required />
-            <label for="password">Password</label>
-            <!--Мы не делаем подтверждение пароля, так как это JavaScript. | We're not doing password
-              confirmation since it's JavaScript-->
-            <!--вроде как этот коментарий не для меня-->
-            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-              required />
-            <h4>Choose a subscription plan</h4>
-            <div class="blocks-list">
-              <div class="block">
-                <input type="radio" name="subscription" id="subscription" value="Free Subscription" /><label
-                  for="subscription">Free Subscription</label>
-                <!--будь хорошим мальчиком и, пожалуйста, разработай поля span :) Люблю тебя :> |
-                be a good boy and design the span fields please :) Love you :>-->
-                <!--сделал | done-->
-                <span>
-                  €0 / month<br />
-                  Create a profile<br />Swipe & match with daily limits<br />Send
-                  basic messages<br />View limited profiles per day </span><br /><br />
-              </div>
-              <div class="block">
-                <input type="radio" name="subscription" id="subscription" value="Plus Subscription" /><label
-                  for="subscription">Plus Subscription</label>
-                <span>
-                  €9.99 / month<br />
-                  Unlimited likes<br />Rewind last swipe<br />1 free Boost per
-                  week<br />Change location<br />No ads </span>
-              </div>
-              <div class="block">
-                <input type="radio" name="subscription" id="subscription" value="Gold Subscription" /><label
-                  for="subscription">Gold Subscription</label>
-                <span>
-                  €19.99 / month<br />
-                  All Plus features<br />See who liked you instantly<br />Priority
-                  profile visibility<br />Daily Super Likes </span>
-              </div>
-              <div class="block">
-                <input type="radio" name="subscription" id="subscription" value="Platinum Subscription" /><label
-                  for="subscription">Platinum Subscription</label>
-                <span>
-                  €29.99 / month<br />
-                  All Gold features<br />Message before matching (when liked)<br />Priority
-                  in recommendations<br />Unlimited Boosts & Super Likes<br />Exclusive
-                  Platinum badge </span>
-              </div>
-              <div class="block">
-                <input type="radio" name="subscription" id="subscription" value="Elite Subscription" /><label
-                  for="subscription">Elite Subscription</label>
-                <span>
-                  €49.99 / month<br />
-                  Personalized match suggestions<br />Verified premium badge<br />Invite-only
-                  live events<br />Dedicated support & profile optimization<br /></span>
-              </div>
-            </div>
-          </form>
-        </div>
-        <!--ЭТОТ РАДИОСПИСОК НУЖНО СТИЛИЗИРОВАТЬ, ОН ВЫЗЫВАЕТ У МЕНЯ НЕПРИЯТНЫЕ ВОЛНЕНИЯ ОТ ДИЗАЙНА, лол
-          | THIS RADIO LIST NEEDS TO BE STYLIZED, IT GIVES ME UNCOMFORTABLE DESIGN VIBES lol-->
-        <!--сделал | done-->
-      </div>
-      <div class="block-wide">
-        <div>
-          <h3>Checkboxes</h3>
-          <div class="to-left">
-            <form>
-              <div>
-                <input type="checkbox" id="tos" name="checkboxList" value="TOS" required />
-                <label for="tos">TOS</label>
-              </div>
-              <div>
-                <input type="checkbox" id="newsletter" name="checkboxList" value="Email Newsletter" />
-                <label for="newsletter">Email Newsletter</label>
-              </div>
-              <div>
-                <input type="checkbox" id="renewal" name="checkboxList" value="Subscription Renewal" />
-                <label for="renewal">Subscription Renewal</label>
-              </div>
-              <div>
-                <input type="checkbox" id="notifications" name="checkboxList" value="Push Notifications" />
-                <label for="notifications">Push Notifications</label>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body>
     <header class="header">
       <div class="container">
         <div class="header-content">
-          <div class="block-submit">
-            <input type="submit" value="Submit" />
+          <div>
+            <h1>Tinder</h1>
           </div>
         </div>
       </div>
     </header>
-    <!--Сделай еще и кнопку, пожалуйста ^^ | Design the button too, pretty please ^^-->
-    <!--сделал | done-->
-  </form>
-</body>
+    <!--по центру страницы, выравнивание по отступам или полям. Это название |
+   in the center of the page, alignment with paddings or margins. this is the name-->
+    <form action="/action_page.php">
+      <div class="container blocks-list">
+        <div class="block">
+          <div>
+            <!--может быть, добавить более тёмный розовый, чтобы h1 не так сильно контрастировал со всем остальным |
+           maybe put a more dark pink so that the h1 won't be in that big of a contrast from everything else-->
+            <!--сделал | done-->
+            <h3>Personal Info</h3>
+            <!-- Я сделаю их в ряд, а вы, пожалуйста, сделайте их в столбцах, как указано в дизайне.
+          | I'll make them in a row, please make them in columns as mentioned in the design-->
+            <!--сделал | done-->
+            <div class="to-left">
+              <label for="firstName" class="required">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                class="base"
+                minlength="2"
+                aria-describedby="first_Name"
+                required
+              /><span class="description" id="first_Name"
+                >Input your first name in text format - e.g. John, minimum
+                number of characters - 2.</span
+              >
+              <label for="lastName" class="required">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                class="base"
+                minlength="2"
+                aria-describedby="last_Name"
+                required
+              />
+              <span class="description" id="last_Name"
+                >Input your last name in text format - e.g. Doe, minimum number
+                of characters - 2.</span
+              >
+              <label for="age" class="required">Age</label>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                class="base"
+                min="16"
+                max="120"
+                step="1"
+                aria-describedby="Age"
+                required
+              />
+              <span class="description" id="Age"
+                >Input your age in numbers - e.g. 18, minimum age allowed - 16,
+                maximum age allowed - 120.</span
+              >
+              <label for="city" class="required">City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                class="base"
+                minlength="2"
+                aria-describedby="City"
+                required
+              />
+              <span class="description" id="City"
+                >Input your city in text format - e.g. Shanghai, minimum number
+                of characters - 2.</span
+              >
+              <label for="zipCode" class="required">ZIP Code</label>
+              <input
+                type="text"
+                id="zipCode"
+                name="zipCode"
+                class="base"
+                title="Input your zip code in numbers"
+                aria-describedby="zip"
+                required
+              />
+              <span class="description" id="zip"
+                >Input your city's zip code in the needed format (text/numbers)
+                - e.g. 2015.</span
+              >
+              <label for="phoneNumber" class="required">Phone Number</label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                name="phoneNumber"
+                class="base"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                title="Input the phone number in the following format +45 12 34 56 78"
+                placeholder="+45 12 34 56 78"
+                aria-describedby="phone"
+                required
+              />
+              <span class="description" id="phone"
+                >Input your phone number in the requested format<br />
+                (+45 12 34 56 78).</span
+              >
+              <label for="email" class="required">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="base"
+                pattern=".+@example\.com"
+                size="30"
+                placeholder="blyat@example.com"
+                aria-describedby="Email"
+                required
+              />
+              <span class="description" id="Email"
+                >Input your email in the requested format
+                (blyat@example.com).</span
+              >
+              <label for="birthDate" class="required">Birth Date</label>
+              <input
+                type="date"
+                id="birthDate"
+                name="birthDate"
+                class="base"
+                aria-describedby="birth"
+                required
+              />
+              <span class="description" id="birth"
+                >Choose your birth date.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div>
+            <h3>Photo</h3>
+            <div class="to-left">
+              <label for="image" class="required">Upload your photo</label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept=".jpg, .jpeg, .png, .tif, .tiff"
+                aria-describedby="photo"
+                required
+              />
+              <span class="description" id="photo"
+                >Upload your photo.<br />
+                Allowed formats: jpg, jpeg, png, tif, tiff.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <h3>Profile</h3>
+          <h4>Short Description About Yourself</h4>
+          <div class="to-left">
+            <label for="genderM" class="required">Gender</label>
+            <select
+              id="genderM"
+              name="genderM"
+              class="base"
+              aria-describedby="gender"
+              required
+            >
+              <option value="">Please select one…</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="non-binary">Non-Binary</option>
+              <option value="other">Other</option>
+              <option value="Prefer not to answer">Prefer not to Answer</option>
+            </select>
+            <span class="description" id="gender"
+              >Choose your gender: female, male, non-binary, other or prefer not
+              to say.</span
+            >
+            <label for="career" class="required">Career</label>
+            <input
+              type="text"
+              id="career"
+              name="career"
+              class="base"
+              min="2"
+              aria-describedby="Career"
+              required
+            />
+            <span class="description" id="Career"
+              >State your career in text format - e.g. doctor, minimum number of
+              characters - 2.</span
+            >
+            <label for="interests" class="required">Interests</label>
+            <textarea
+              id="interests"
+              name="interests"
+              class="base"
+              min="2"
+              aria-describedby="Interests"
+              required
+            ></textarea
+            ><span class="description" id="Interests"
+              >Describe your interests in text format, minimum number of
+              characters - 2.</span
+            >
+            <label for="hobbies" class="required">Hobbies</label>
+            <textarea
+              id="hobbies"
+              name="hobbies"
+              class="base"
+              min="2"
+              aria-describedby="Hobbies"
+              required
+            ></textarea>
+            <span class="description" id="Hobbies"
+              >Describe your hobbies in text format, minimum number of
+              characters - 2.</span
+            >
+            <label for="starsign" class="required">Star sign</label>
+            <input
+              type="starsign"
+              id="starsign"
+              name="starsign"
+              class="base"
+              min="2"
+              id="zodiacs"
+              required
+            />
+            <span class="description" id="zodiacs"
+              >State your star sign - e.g. libra, minimum number of characters -
+              2.</span
+            >
+            <label for="mbti" class="required">MBTI</label>
+            <input
+              type="mbti"
+              id="mbti"
+              name="mbti"
+              class="base"
+              min="2"
+              aria-describedby="MBTI"
+              required
+            />
+            <span class="description" id="MBTI"
+              >State your star MBTI - e.g. INTP, minimum number of characters -
+              2. ></span
+            >
+            <span class="description"
+              >* MBTI (Myers-Briggs Type Indicator) is self-report inventory
+              designed to identify a person's personality type, strengths, and
+              preferences.</span
+            >
+          </div>
+        </div>
+        <div class="block">
+          <div class="to-center">
+            <h3>Main Preferences</h3>
+            <div class="to-left">
+              <label for="gender" class="required">Gender Preferences</label>
+              <select
+                id="gender"
+                name="gender"
+                class="base"
+                aria-describedby="genderPref"
+                required
+              >
+                <option value="">Please select one…</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="non-binary">Non-Binary</option>
+                <option value="other">Other</option>
+                <option value="Prefer not to answer">
+                  Prefer not to Answer
+                </option>
+              </select>
+              <span class="description" id="genderPref"
+                >Choose your gender preferences: female, male, <br />non-binary,
+                other or prefer not to answer.</span
+              >
+              <label for="sexualOrientation" class="required"
+                >Sexual Orientation</label
+              >
+              <select
+                id="sexualOrientation"
+                name="sexualOrientation"
+                class="base"
+                aria-describedby="sexualPref"
+                required
+              >
+                <option value="">Please select one…</option>
+                <option value="straight">Straight</option>
+                <option value="gay">Gay</option>
+                <option value="lesbian">Lesbian</option>
+                <option value="bisexual">Bisexual</option>
+                <option value="pansexual">Pansexual</option>
+                <option value="asexual">Asexual</option>
+                <option value="other">Other</option>
+                <option value="Prefer not to answer">
+                  Prefer not to Answer
+                </option>
+              </select>
+              <span class="description" id="sexualPref"
+                >Choose your sexual preferences: straight, gay, lesbian,
+                bisexual, pansexual, asexual or other.</span
+              >
+              <h4>Preferences</h4>
+              <label for="ageRange" class="required">Age Range</label>
+              <select
+                id="ageRange"
+                name="ageRange"
+                class="base"
+                aria-describedby="ageR"
+                required
+              >
+                <option value="">-- Choose a range --</option>
+                <option value="1">Under 25</option>
+                <option value="2">25-40</option>
+                <option value="3">40-60</option>
+                <option value="4">Over 60</option>
+              </select>
+              <span class="description" id="ageR"
+                >Choose your preferred age range: under 25, 25-40, 40-60, or
+                over 60.</span
+              >
+              <label for="locationRange" class="required">Location Range</label>
+              <input
+                type="range"
+                id="locationRange"
+                name="locationRange"
+                class="base"
+                min="4"
+                max="150"
+                step="1"
+                list="markers"
+                aria-describedby="locationR"
+              />
+              <datalist id="markers">
+                <option value="4"></option>
+                <option value="25"></option>
+                <option value="50"></option>
+                <option value="75"></option>
+                <option value="100"></option>
+                <option value="125"></option>
+                <option value="150"></option>
+              </datalist>
+              <span class="description" id="locationR"
+                >Choose your preferred location range (each slide state a
+                range): 4km, 25km, 50km, 75km, 100km, 125km or 150km.</span
+              >
+              <label for="commitmentType" class="required"
+                >Commitment Type</label
+              >
+              <select
+                id="commitmentType"
+                name="commitmentType"
+                class="base"
+                aria-describedby="commitment"
+                required
+              >
+                <option value="">-- Choose a type --</option>
+                <option value="longTerm">Long-Term Commitment</option>
+                <option value="shortTerm">Short-Term Commitment</option>
+                <option value="romantic">Romantic Relationship</option>
+                <option value="open">Open Relationship</option>
+                <option value="casual">Casual Dating</option>
+              </select>
+              <span class="description" id="commitment"
+                >Choose your preferred commitment type: long-term commitment,
+                short-term commitment, romantic relationship, open relationship
+                or casual dating.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div>
+            <h3>Additional Preferences</h3>
+            <div class="to-left">
+              <label for="interestsPref">Interests Preferences</label>
+              <textarea
+                id="interestsPref"
+                name="interestsPref"
+                aria-describedby="interestsP"
+              ></textarea>
+              <span class="description" id="interestsP"
+                >Describe the interests of people you are searching for (in text
+                format).</span
+              >
+              <label for="hobbiesPref">Hobbies Preferences</label>
+              <textarea
+                id="hobbiesPref"
+                name="hobbiesPref"
+                aria-describedby="hobbiesP"
+              ></textarea>
+              <span class="description" id="hobbiesP"
+                >Describe the hobbies of people you are searching for (in text
+                format).</span
+              >
+              <label for="starsignPref">Star sign Preferences</label>
+              <input
+                type="starsignPref"
+                id="starsignPref"
+                name="starsignPref"
+                aria-describedby="zodiacP"
+              />
+              <span class="description" id="zodiacP"
+                >State the star signs of people you are searching for (in text
+                format).</span
+              >
+              <label for="mbtiPref">MBTI Preferences</label>
+              <input
+                type="mbtiPref"
+                id="mbtiPref"
+                name="mbtiPref"
+                aria-describedby="mbtiP"
+              />
+              <span class="description" id="mbtiP"
+                >State the MBTI of people you are searching for (in text
+                format).</span
+              >
+              <h4>Look Preferences</h4>
+              <label for="hair">Preferred Hair Type</label>
+              <select id="hair" name="hair" aria-describedby="hair">
+                <option value="">-- Choose hair type --</option>
+                <option value="long">Long</option>
+                <option value="medium">Medium</option>
+                <option value="short">Short</option>
+                <option value="curly">Curly</option>
+                <option value="straight">Straight</option>
+                <option value="wavy">Wavy</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="hair"
+                >Choose your preferred hair type: long, medium, short, curly,
+                straight, wavy or no preference.</span
+              >
+              <label for="haircolor">Preferred Hair Color</label>
+              <select id="haircolor" name="haircolor" aria-describedby="hairC">
+                <option value="">-- Choose color --</option>
+                <option value="blonde">Blonde</option>
+                <option value="brunette">Brunette</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="dyed">Dyed / Unnatural</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="hairC"
+                >Choose your preferred hair color: blonde, brunette, black, red,
+                dyed/unnatural or no preference.</span
+              >
+              <label for="eyes">Preferred Eye Color</label>
+              <select id="eyes" name="eyes" aria-describedby="eye">
+                <option value="">-- Choose eye color --</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="brown">Brown</option>
+                <option value="hazel">Hazel</option>
+                <option value="gray">Gray</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="eye"
+                >Choose your preferred eye color: blue, green, brown, hazel,
+                gray or no preference.</span
+              >
+              <label for="body">Preferred Body Type</label>
+              <select id="body" name="body" aria-describedby="bodyP">
+                <option value="">-- Choose body type --</option>
+                <option value="slim">Slim</option>
+                <option value="average">Average</option>
+                <option value="athletic">Athletic</option>
+                <option value="curvy">Curvy</option>
+                <option value="muscular">Muscular</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="bodyP"
+                >Choose your preferred body type: slim, average, athletic,
+                curvy, muscular or no preference.</span
+              >
+              <label for="style">Preferred Style</label>
+              <select id="style" name="style" aria-describedby="styleP">
+                <option value="">-- Choose style --</option>
+                <option value="casual">Casual</option>
+                <option value="sporty">Sporty</option>
+                <option value="elegant">Elegant</option>
+                <option value="streetwear">Streetwear</option>
+                <option value="artistic">Artistic / Edgy</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="styleP"
+                >Choose your preferred style: casual, sporty, elegant,
+                streetwear, artistic/edgy or no preference.</span
+              >
+              <label for="height">Preferred Height</label>
+              <select id="height" name="height" aria-describedby="heightP">
+                <option value="">-- Choose height preference --</option>
+                <option value="shorter">Shorter than me</option>
+                <option value="same">About the same height</option>
+                <option value="taller">Taller than me</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="heightP"
+                >Choose your preferred height: shorter, same height, taller or
+                no preference.</span
+              >
+              <label for="vibe">Preferred Overall Look</label>
+              <select id="vibe" name="vibe" aria-describedby="look">
+                <option value="">-- Choose look type --</option>
+                <option value="natural">Natural</option>
+                <option value="confident">Confident</option>
+                <option value="classic">Classic</option>
+                <option value="artistic">Artistic</option>
+                <option value="unique">Unique / Creative</option>
+                <option value="any">No preference</option>
+              </select>
+              <span class="description" id="look"
+                >Choose your preferred overall look: natural, confident,
+                classic, artistic, unique/creative or no preference.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div>
+            <h3>Photo Album</h3>
+            <div class="to-left">
+              <label for="imageAdd">Upload additional photos to display</label>
+              <input
+                type="file"
+                id="imageAdd"
+                name="imageAdd"
+                accept=".jpg, .jpeg, .png, .tif, .tiff"
+                aria-describedby="album"
+              />
+              <span class="description" id="album"
+                >Upload some additional photos.<br />Allowed formats: jpg, jpeg,
+                png, tif, tiff.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="block-wide">
+          <h3>Sign-up</h3>
+          <div class="to-left">
+            <label for="nickname" class="required"
+              >Nickname (Display Name)</label
+            >
+            <input
+              type="text"
+              id="nickname"
+              name="nickname"
+              class="base"
+              minlength="2"
+              aria-describedby="nisck"
+              required
+            />
+            <span class="description" id="nick"
+              >Input your nickname for display - e.g. sophiekso, minimum number
+              of characters - 2.</span
+            >
+            <label for="password" class="required">Password</label>
+            <!--Мы не делаем подтверждение пароля, так как это JavaScript. | We're not doing password
+              confirmation since it's JavaScript-->
+            <!--вроде как этот коментарий не для меня-->
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="base"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+              aria-describedby="pass"
+              required
+            />
+            <span class="description" id="pass"
+              >Input your password.<br />Must contain at least one number and
+              one uppercase and lowercase letter, and at least 8 or more
+              characters.</span
+            >
+          </div>
+          <h4>Choose a subscription plan</h4>
+          <span class="description" id="sub">
+            Choose your subscription plan: free subscription, plus subscription,
+            gold subscription, platinum subscription, elite subscription
+          </span>
 
+          <div class="blocks-list">
+            <div class="block">
+              <input
+                type="radio"
+                name="subscription"
+                id="subFree"
+                aria-describedby="sub"
+                value="Free Subscription"
+              />
+              <label for="subFree">Free Subscription</label>
+              <span>
+                €0 / month<br />
+                Create a profile<br />Swipe & match with daily limits<br />Send
+                basic messages<br />View limited profiles per day
+              </span>
+            </div>
+
+            <div class="block">
+              <input
+                type="radio"
+                name="subscription"
+                id="subPlus"
+                aria-describedby="sub"
+                value="Plus Subscription"
+              />
+              <label for="subPlus">Plus Subscription</label>
+              <span>
+                €9.99 / month<br />
+                Unlimited likes<br />Rewind last swipe<br />1 free Boost per
+                week<br />Change location<br />No ads
+              </span>
+            </div>
+
+            <div class="block">
+              <input
+                type="radio"
+                name="subscription"
+                id="subGold"
+                aria-describedby="sub"
+                value="Gold Subscription"
+              />
+              <label for="subGold">Gold Subscription</label>
+              <span>
+                €19.99 / month<br />
+                All Plus features<br />See who liked you instantly<br />Priority
+                profile visibility<br />Daily Super Likes
+              </span>
+            </div>
+
+            <div class="block">
+              <input
+                type="radio"
+                name="subscription"
+                id="subPlatinum"
+                aria-describedby="sub"
+                value="Platinum Subscription"
+              />
+              <label for="subPlatinum">Platinum Subscription</label>
+              <span>
+                €29.99 / month<br />
+                All Gold features<br />Message before matching (when liked)<br />Priority
+                in recommendations<br />Unlimited Boosts & Super Likes<br />Exclusive
+                Platinum badge
+              </span>
+            </div>
+
+            <div class="block">
+              <input
+                type="radio"
+                name="subscription"
+                id="subElite"
+                aria-describedby="sub"
+                value="Elite Subscription"
+              />
+              <label for="subElite">Elite Subscription</label>
+              <span>
+                €49.99 / month<br />
+                Personalized match suggestions<br />Verified premium badge<br />Invite-only
+                live events<br />Dedicated support & profile optimization
+              </span>
+            </div>
+          </div>
+          <!--ЭТОТ РАДИОСПИСОК НУЖНО СТИЛИЗИРОВАТЬ, ОН ВЫЗЫВАЕТ У МЕНЯ НЕПРИЯТНЫЕ ВОЛНЕНИЯ ОТ ДИЗАЙНА, лол
+          | THIS RADIO LIST NEEDS TO BE STYLIZED, IT GIVES ME UNCOMFORTABLE DESIGN VIBES lol-->
+          <!--сделал | done-->
+        </div>
+        <div class="block-wide">
+          <div>
+            <h3>Checkboxes</h3>
+            <div class="to-left">
+              <div>
+                <input
+                  type="checkbox"
+                  id="tos"
+                  name="checkboxList"
+                  value="TOS"
+                  required
+                />
+                <label for="tos">TOS</label>
+                <span>(Terms of Service)</span>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="checkboxList"
+                  value="Email Newsletter"
+                />
+                <label for="newsletter">Email Newsletter</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="renewal"
+                  name="checkboxList"
+                  value="Subscription Renewal"
+                />
+                <label for="renewal">Subscription Renewal</label>
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  id="notifications"
+                  name="checkboxList"
+                  value="Push Notifications"
+                />
+                <label for="notifications">Push Notifications</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="description"
+          >The fields marked with * are required, the other are optional.</span
+        >
+      </div>
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <div class="block-submit">
+              <input type="submit" value="Submit" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--Сделай еще и кнопку, пожалуйста ^^ | Design the button too, pretty please ^^-->
+      <!--сделал | done-->
+    </form>
+  </body>
 </html>
